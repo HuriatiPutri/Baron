@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_margin="30dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/imgUser"
+        android:src="@drawable/ic_img_profile"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+    <TextView
+        android:id="@+id/txtNama"
+        android:layout_toRightOf="@id/imgUser"
+        android:text="Nama Pemateri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/txtKategori"
+        android:layout_toRightOf="@id/imgUser"
+        android:layout_below="@id/txtNama"
+        android:text="Kategori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/txtHarga"
+        android:layout_toRightOf="@id/imgUser"
+        android:layout_below="@id/txtKategori"
+        android:text="Kategori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/txtDurasi"
+        android:layout_below="@id/txtKategori"
+        android:layout_toRightOf="@id/txtHarga"
+        android:text=" / Durasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
