@@ -1,5 +1,6 @@
 package com.fgt.baron;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -43,32 +44,37 @@ public class ProfileActivity extends AppCompatActivity {
         btnSimpan = findViewById(R.id.btnSimpan);
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-        reference = FirebaseDatabase.getInstance().getReference("Profile").child(firebaseUser.getUid());
-        reference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                User user = dataSnapshot.getValue(User.class);
-                if (user != null) {
-                    edtNama.setText(user.getUsername() + "");
-                    edtTtl.setText(user.getTtl() + "");
-                    edtJk.setText(user.getJenis_kelamin() + "");
-                    edtAlamat.setText(user.getAlamat() + "");
-                    edtKontak.setText(user.getKontak() + "");
-                    edtDesk.setText(user.getDesk() + "");
-                    edtPendidikan.setText(user.getPendidikan() + "");
-                    edtPekerjaan.setText(user.getPekerjaan() + "");
-                    edtUmur.setText(user.getUmur() + "");
+        if(firebaseUser != null){
+            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+            finish();
+        }else {
+            firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+            reference = FirebaseDatabase.getInstance().getReference("Profile").child(firebaseUser.getUid());
+            reference.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    User user = dataSnapshot.getValue(User.class);
+                    if (user != null) {
+                        edtNama.setText(user.getUsername() + "");
+                        edtTtl.setText(user.getTtl() + "");
+                        edtJk.setText(user.getJenis_kelamin() + "");
+                        edtAlamat.setText(user.getAlamat() + "");
+                        edtKontak.setText(user.getKontak() + "");
+                        edtDesk.setText(user.getDesk() + "");
+                        edtPendidikan.setText(user.getPendidikan() + "");
+                        edtPekerjaan.setText(user.getPekerjaan() + "");
+                        edtUmur.setText(user.getUmur() + "");
+
+                    }
+                    // profile.setImageResource(R.drawable.pofile);
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
 
                 }
-               // profile.setImageResource(R.drawable.pofile);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
+            });
+        }
         btnSimpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
