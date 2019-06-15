@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.fgt.baron.model.User;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -70,7 +72,26 @@ public class ProfileActivity extends AppCompatActivity {
         btnSimpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+               // Simpan(new User(edtNama.getText(), edtJk.getText(), edtTtl.getText(), edtAlamat.getText(), edtKontak.getText(), edtDesk.getText(), edtPendidikan.getText(), edtPekerjaan.getText(), String.valueOf(edtUmur.getText())));
+                DatabaseReference database = FirebaseDatabase.getInstance().getReference();
+                //new User(edtNama.getText(), edtJk.getText(), edtTtl.getText(), edtAlamat.getText(), edtKontak.getText(), edtDesk.getText(), edtPendidikan.getText(), edtPekerjaan.getText(), String.valueOf(edtUmur.getText()))
+                database.child("Profile")
+                        .child(firebaseUser.getUid())
+                        .setValue(new User(edtNama.getText().toString()
+                                , edtJk.getText().toString()
+                                , edtTtl.getText().toString()
+                                , edtAlamat.getText().toString()
+                                , edtKontak.getText().toString()
+                                , edtDesk.getText().toString()
+                                , edtPendidikan.getText().toString()
+                                , edtPekerjaan.getText().toString()
+                                ,Integer.parseInt(edtUmur.getText().toString())))
+                        .addOnSuccessListener(ProfileActivity.this, new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Toast.makeText(getApplicationContext(), "Data Disimpan", Toast.LENGTH_SHORT).show();
+                            }
+                        });
             }
         });
     }

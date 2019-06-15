@@ -11,17 +11,16 @@ public class User {
     public User() {
     }
 
-    public User(String id, String username, String jenis_kelamin, String ttl, String alamat, String kontak, String desk, String foto, String pendidikan, String pengalaman_kerja, String pekerjaan, int umur) {
-        Id = id;
+    public User(String username, String jenis_kelamin, String ttl, String alamat, String kontak, String desk, String pendidikan, String pekerjaan, int umur) {
         this.username = username;
         this.jenis_kelamin = jenis_kelamin;
         this.ttl = ttl;
         this.alamat = alamat;
         this.kontak = kontak;
         this.desk = desk;
-        this.foto = foto;
+       // this.foto = foto;
         this.pendidikan = pendidikan;
-        this.pengalaman_kerja = pengalaman_kerja;
+       // this.pengalaman_kerja = pengalaman_kerja;
         this.pekerjaan = pekerjaan;
         this.umur = umur;
     }
