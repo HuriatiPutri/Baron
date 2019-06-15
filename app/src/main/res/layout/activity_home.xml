@@ -1,15 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-    <Button
-        android:id="@+id/btnTest"
-        android:text="profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:id="@+id/layoutHeader"
+        android:background="@drawable/ic_retangle_top"
+        android:layout_width="match_parent"
+        android:layout_height="380dp">
 
-</LinearLayout>
+        <View
+            android:id="@+id/viewShort"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/ic_retangle_long"
+            android:layout_width="40dp"
+            android:layout_height="10dp"/>
+
+        <View
+            android:id="@+id/viewLong"
+            android:layout_below="@+id/viewShort"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_retangle_long"
+            android:layout_width="75dp"
+            android:layout_height="10dp"/>
+
+        <TextView
+            android:id="@+id/textInfo"
+            android:text="Find what you want to know"
+            android:layout_below="@+id/viewLong"
+            android:textSize="12dp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textHeader"
+            android:text="Explore"
+            android:layout_below="@+id/textInfo"
+            android:textSize="50dp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:src="@drawable/ic_img_profile"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_below="@+id/viewLong"
+            android:layout_marginTop="20dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+        <Button
+            android:id="@+id/btnBlue"
+            android:layout_below="@+id/textHeader"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/ic_retangle_blue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:id="@+id/layoutButton"
+            android:layout_below="@+id/btnBlue"
+            android:layout_margin="30dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_eclipse"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+            <Button
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_eclipse"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+            <Button
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_eclipse"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+            <Button
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_eclipse"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 btnGet.setAnimation(buttonClick);
-                Intent goHome = new Intent(getApplicationContext(), RegisterActivity.class);
+                Intent goHome = new Intent(getApplicationContext(), HomeActivity.class);
                 startActivity(goHome);
             }
         });
