@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "170704826108",
+    "firebase_url": "https://baron-2bc0e.firebaseio.com",
+    "project_id": "baron-2bc0e",
+    "storage_bucket": "baron-2bc0e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:170704826108:android:1a0ecee81d46597d",
+        "android_client_info": {
+          "package_name": "com.fgt.baron"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "170704826108-p1jrd33n8v2up70bv0nuen5fjrq5lkjd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fgt.baron",
+            "certificate_hash": "62cbc1a9a3d93cf13e9bb4de467c7f9ebb6c506d"
+          }
+        },
+        {
+          "client_id": "170704826108-11rodeds1rlvtb7qpehpq60l5e46ca1v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1yrREgQ2hba-WbVdo5f7ZhdsOcJ3d1yE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "170704826108-11rodeds1rlvtb7qpehpq60l5e46ca1v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
