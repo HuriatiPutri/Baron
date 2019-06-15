@@ -44,11 +44,10 @@ public class ProfileActivity extends AppCompatActivity {
         btnSimpan = findViewById(R.id.btnSimpan);
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-        if(firebaseUser != null){
+        if(firebaseUser == null){
             startActivity(new Intent(getApplicationContext(), LoginActivity.class));
             finish();
         }else {
-            firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
             reference = FirebaseDatabase.getInstance().getReference("Profile").child(firebaseUser.getUid());
             reference.addValueEventListener(new ValueEventListener() {
                 @Override
