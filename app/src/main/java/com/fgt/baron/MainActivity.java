@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 btnTutorial.setAnimation(buttonClick);
-                Intent goHome = new Intent(getApplicationContext(), LoginActivity.class);
+                Intent goHome = new Intent(getApplicationContext(), TutorialActivity.class);
                 startActivity(goHome);
             }
         });

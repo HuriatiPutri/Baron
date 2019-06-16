@@ -18,9 +18,7 @@ public class User {
         this.alamat = alamat;
         this.kontak = kontak;
         this.desk = desk;
-       // this.foto = foto;
         this.pendidikan = pendidikan;
-       // this.pengalaman_kerja = pengalaman_kerja;
         this.pekerjaan = pekerjaan;
         this.umur = umur;
     }

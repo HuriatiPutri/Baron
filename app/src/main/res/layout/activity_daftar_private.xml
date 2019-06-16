@@ -1,33 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:orientation="vertical"
-    tools:context=".DaftarPemateriActivity">
-    <Spinner
-        android:id="@+id/spKategori"
+    tools:context=".DaftarPrivateActivity">
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/back"
+        android:layout_width="25dp"
+        android:layout_height="25dp" />
+
+    <LinearLayout
+        android:layout_below="@+id/btnBack"
+        android:layout_above="@id/btnLogin"
+        android:orientation="vertical"
+        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <EditText
-        android:id="@+id/edtHarga"
-        android:hint="Harga"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <EditText
-        android:id="@+id/edtDurasi"
-        android:hint="Durasi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <EditText
-        android:id="@+id/edtDesk"
-        android:hint="Deskripsi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <Button
-        android:id="@+id/btnDaftar"
-        android:text="Daftar Jadi Pemateri"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/viewCard"
+            android:layout_below="@+id/btnBack"
+            android:orientation="vertical"
+            android:background="@drawable/card"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Kategori"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:id="@+id/spKategori"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Harga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/edtHarga"
+                android:hint="Harga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Durasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/edtDurasi"
+                android:hint="Durasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Deskripsi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/edtDesk"
+                android:hint="Deskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:layout_marginTop="25dp"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:id="@+id/btnDaftar"
+                android:background="@drawable/ic_btn_blue"
+                android:text="Daftar Jadi Pemateri"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
