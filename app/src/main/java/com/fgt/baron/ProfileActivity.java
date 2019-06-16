@@ -45,7 +45,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         if(firebaseUser == null){
-            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+            startActivity(new Intent(getApplicationContext(), RegisterActivity.class));
             finish();
         }else {
             reference = FirebaseDatabase.getInstance().getReference("Profile").child(firebaseUser.getUid());

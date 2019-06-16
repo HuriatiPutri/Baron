@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorBlue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChangeActivity">
+
+    <RelativeLayout
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Tampilkan dalam mode :"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:textSize="15dp"
+            android:id="@+id/title"
+            android:textColor="@color/colorWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/title"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_retangle_rounded"
+            android:layout_width="300dp"
+            android:layout_height="225dp">
+
+            <Button
+                android:id="@+id/btnBelajar"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:text="Mode Belajar"
+                android:textAllCaps="false"
+                android:background="@drawable/ic_btn_gray"
+                android:layout_width="200dp"
+                android:layout_height="50dp" />
+
+            <Button
+                android:id="@+id/btnMengajar"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:layout_marginTop="20dp"
+                android:text="Mode Mengajar"
+                android:textAllCaps="false"
+                android:background="@drawable/ic_btn_blue"
+                android:layout_width="200dp"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

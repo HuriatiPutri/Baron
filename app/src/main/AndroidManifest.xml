@@ -9,7 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".DetailActivity"></activity>
+        <activity android:name=".AccountActivity"></activity>
+        <activity android:name=".adapter.TampilanArActivity" />
+        <activity
+            android:name=".MengajarActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".RecommendedActivity" />
+        <activity android:name=".TrendingActivity" />
+        <activity android:name=".InformasiForgetActivity" />
+        <activity android:name=".ForgetPasswordActivity" />
+        <activity android:name=".ChangeActivity" />
+        <activity
+            android:name=".TampilanVrActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".AlertVrActivity" />
+        <activity android:name=".LanjutVrActivity" />
+        <activity android:name=".DeskripsiMateriActivity" />
+        <activity android:name=".ListMateriActivity" />
+        <activity android:name=".DetailActivity" />
         <activity android:name=".DaftarPemateriActivity" />
         <activity
             android:name=".MainActivity"

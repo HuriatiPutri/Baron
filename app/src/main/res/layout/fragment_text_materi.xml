@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TextMateriFragment">
+
+    <ScrollView
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgContent"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_img_content"
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+
+            <TextView
+                android:id="@+id/textDesc"
+                android:layout_below="@+id/imgContent"
+                android:layout_marginTop="20dp"
+                android:text="Jantung (bahasa Latin: cor) adalah sebuah rongga, rongga organ berotot yang memompa darah lewat pembuluh darah oleh kontraksi berirama yang berulang. Darah menyuplai okisgen dan nutrisi pada tubuh, juga membantu menghilangkan sisa-sisa metabolisme. Istilah kardiak berarti berhubungan dengan jantung, dari kata Yunani cardia untuk jantung. Jantung adalah salah satu organ manusia yang berperan dalam sistem peredaran darah, terletak di rongga dada agak sebelah kiri.
+
+Pada manusia, mamalia, dan burung, jantung dibagi menjadi empat ruas: atrium atas kanan dan kiri; dan ventrikel bawah kanan dan kiri. Pada umumnya atrium dan ventrikel kanan disebut jantung kanan, dan sisanya disebut jantung kiri. Ikan hanya memiliki dua ruas, sebuah atrium dan sebuah ventrikel, sementara reptil memiliki tiga ruas. Pada jantung yang sehat darah mengalir satu arah melalui pembuluh darah. Terdapat sebuah kantung pembungkus yang melindungi jantung, perikardium, yang juga mengandung sedikit cairan. Dinding jantung tersusun atas tiga lapisan: epikardium, miokardium, dan endokardium.
+
+Jantung memompa darah melewati dua sistem sirkulasi. Darah yang berasal dari sistem peredaran darah besar mengandung sedikit oksigen dan memasuki atrium kanan melalui vena kava superior dan inferior menuju ventrikel kanan. Dari sini darah dipompa menuju paru-paru, tempat darah memperoleh oksigen dan meninggalkan karbon dioksida. Darah yang sudah mengandung oksigen kembali menuju atrium kiri, melewati ventrikel kiri dan dipompa menuju seluruh tubuh melalui aorta—di mana oksigen dipakai dan melalui metabolisme menjadi karbon dioksida. Ditambah lagi, darah juga membawa nutrisi dari hati menuju berbagai organ tubuh, sementara membawa zat sisa menuju hati dan ginjal. Normalnya, jumlah darah yang terpompa menuju paru-paru sama dengan jumlah darah yang terpompa ke seluruh tubuh. Pembuluh vena memompa darah menuju jantung dan membawa darah yang kaya karbon dioksida - kecuali vena pulmonaris dan vena pada sistem pencernaan. Arteri membawa darah keluar jantung, membawa oksigen selain pada arteri pulmonaris. Jarak yang jauh dari jantung membuat pembuluh vena memiliki tekanan yang lebih kecil dari pembuluh arteri. Ketika beristirahat, jantung berdetak kurang lebih 72 kali per menit. Latihan fisik biasanya mengangkat jumlahnya, tetapi jumlah melambat selama beberapa waktu, yang baik untuk jantung.
+
+Penyak
+t kardiovaskular adalah penyebab kematian yang umum pada tahun 2008, membawa 30% manusia pada kematian. Diikuti oleh penyakit pembuluh koroner dan stroke. Penyebab utamanya adalah: merokok, obesitas, latihan yang kurang, kolesterol tinggi, tekanan darah tinggi, diabetes, dan lain-lain. Diagnosis dari kardiovaskular seringkali dilakukan dengan stetoskop, ECG atau melalui pendengaran ultrasonik. Spesial yang fokus pada penyakit jantung disebut kardiologis, meskipun dibutuhkan spesialis lain untuk menanganinya."
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

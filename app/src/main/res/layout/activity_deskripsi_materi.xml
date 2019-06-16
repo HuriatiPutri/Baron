@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeskripsiMateriActivity">
+
+    <View
+        android:layout_margin="30dp"
+        android:background="@drawable/ic_retangle_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:background="@drawable/ic_btn_back"
+        android:layout_marginTop="55dp"
+        android:layout_width="100dp"
+        android:layout_height="40dp" />
+
+    <Button
+        android:id="@+id/btnBelajar"
+        android:text="Mode Belajar"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ic_btn_left_gray"
+        android:layout_marginTop="55dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp" />
+
+    <RelativeLayout
+        android:id="@+id/layoutUser"
+        android:layout_below="@id/btnBelajar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfile"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_img_people1"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/textUser"
+            android:layout_toRightOf="@+id/imgProfile"
+            android:layout_marginLeft="20dp"
+            android:text="Dr.Firanda"
+            android:textSize="20dp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_toRightOf="@+id/imgProfile"
+            android:layout_below="@+id/textUser"
+            android:layout_marginLeft="20dp"
+            android:text="Kesehatan Ibu Hamil"
+            android:textSize="15dp"
+            android:textColor="@color/colorBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:layout_below="@+id/layoutUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tablayout"
+        android:layout_marginTop="40dp"
+        app:tabTextAppearance="@style/AppTabLayout"
+        android:background="@drawable/ic_retangle_tab"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    </android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:layout_below="@id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/pager">
+
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

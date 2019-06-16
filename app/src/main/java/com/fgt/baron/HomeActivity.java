@@ -9,6 +9,7 @@ import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.fgt.baron.adapter.pagerAdapter;
 import com.fgt.baron.model.pagerModel;
@@ -23,6 +24,7 @@ public class HomeActivity extends AppCompatActivity {
     ViewPager viewPager;
     pagerAdapter adapter;
     List<pagerModel> models;
+    TextView textTrending, textRecommended;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,9 @@ public class HomeActivity extends AppCompatActivity {
 
     private void init() {
         imgProfile = (ImageView)findViewById(R.id.imgProfile);
+
+        textTrending = (TextView)findViewById(R.id.textTrending);
+        textRecommended = (TextView)findViewById(R.id.textRecommended);
 
         models = new ArrayList<>();
         models.add(new pagerModel(R.drawable.pager4));
@@ -54,8 +59,26 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 imgProfile.startAnimation(buttonClick);
-                Intent goProfile = new Intent(getApplicationContext(), ProfileActivity.class);
+                Intent goProfile = new Intent(getApplicationContext(), AccountActivity.class);
                 startActivity(goProfile);
+            }
+        });
+
+        textTrending.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textTrending.setAnimation(buttonClick);
+                Intent i = new Intent(getApplicationContext(), TrendingActivity.class);
+                startActivity(i);
+            }
+        });
+
+        textRecommended.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textRecommended.setAnimation(buttonClick);
+                Intent i = new Intent(getApplicationContext(), RecommendedActivity.class);
+                startActivity(i);
             }
         });
 

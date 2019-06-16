@@ -15,13 +15,13 @@ import com.fgt.baron.model.pagerModel;
 
 import java.util.List;
 
-public class pagerAdapter extends PagerAdapter {
+public class pagerMengajarAdapter extends PagerAdapter {
 
     private List<pagerModel> models;
     private LayoutInflater layoutInflater;
     private Context context;
 
-    public pagerAdapter(List<pagerModel> models, Context context) {
+    public pagerMengajarAdapter(List<pagerModel> models, Context context) {
         this.models = models;
         this.context = context;
     }
@@ -40,7 +40,7 @@ public class pagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         layoutInflater = LayoutInflater.from(context);
-        final View view = layoutInflater.inflate(R.layout.item_list_pager, container, false);
+        final View view = layoutInflater.inflate(R.layout.item_mengajar, container, false);
         ImageView imageView;
         imageView = view.findViewById(R.id.image);
 

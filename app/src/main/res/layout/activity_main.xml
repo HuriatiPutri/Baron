@@ -12,20 +12,10 @@
         android:id="@+id/imgIcon"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="100dp"
-        android:layout_marginLeft="20dp"
-        android:src="@drawable/ic_icon"
-        android:layout_width="190dp"
-        android:layout_height="200dp" />
+        android:src="@drawable/logo"
+        android:layout_width="250dp"
+        android:layout_height="250dp" />
 
-    <TextView
-        android:layout_below="@+id/imgIcon"
-        android:layout_marginLeft="20dp"
-        android:text="Creative"
-        android:textColor="@color/colorBlue"
-        android:textStyle="bold"
-        android:textSize="50dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/btnGet"

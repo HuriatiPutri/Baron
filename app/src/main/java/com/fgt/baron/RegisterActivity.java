@@ -6,8 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -23,7 +25,8 @@ import java.util.HashMap;
 public class RegisterActivity extends AppCompatActivity {
 
     EditText edtEmail, edtNama, edtPassword;
-    Button btnSignUp;
+    ImageButton btnSignUp, btnLogin;
+    private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
 
     FirebaseAuth auth;
     DatabaseReference reference;
@@ -40,10 +43,23 @@ public class RegisterActivity extends AppCompatActivity {
         edtNama = findViewById(R.id.edtNama);
         edtPassword = findViewById(R.id.edtPassword);
         btnSignUp = findViewById(R.id.btnRegister);
+        btnLogin = findViewById(R.id.btnLogin);
+
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                btnSignUp.startAnimation(buttonClick);
                 registrasi(edtNama.getText().toString(), edtEmail.getText().toString(), edtPassword.getText().toString());
+            }
+        });
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btnLogin.startAnimation(buttonClick);
+                Intent goLogin = new Intent(getApplicationContext(),LoginActivity.class);
+                startActivity(goLogin);
+                finish();
             }
         });
 
@@ -84,6 +100,7 @@ public class RegisterActivity extends AppCompatActivity {
                                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK );
                                         startActivity(intent);
                                         finish();
+                                        Toast.makeText(RegisterActivity.this, "Data Berhasil Disimpan", Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });
